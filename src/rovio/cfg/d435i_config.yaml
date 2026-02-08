@@ -1,0 +1,121 @@
+# ROVIO Configuration for Intel RealSense D435i
+# Camera: 1280x720, IMU built-in
+
+Common:
+  verbose: false
+  doVECalibration: false
+  depthType: 0  # REGULAR
+  doFrameVisualisation: true
+
+Camera:
+  # D435i color camera intrinsics from camera_info
+  # K = [908.74, 0, 644.10; 0, 908.42, 380.57; 0, 0, 1]
+  Camera0:
+    CalibrationFile: ""  # Not using external calibration
+    # Camera matrix (fx, fy, cx, cy)
+    k1: 0.0  # Radial distortion (plumb_bob model shows 0)
+    k2: 0.0
+    k3: 0.0
+    k4: 0.0
+    k5: 0.0
+    k6: 0.0
+    p1: 0.0  # Tangential distortion
+    p2: 0.0
+    s1: 0.0
+    s2: 0.0
+    s3: 0.0
+    s4: 0.0
+    # Intrinsic parameters
+    fx: 908.7426147460938
+    fy: 908.4165649414062
+    cx: 644.1002807617188
+    cy: 380.572021484375
+    
+Imu:
+  # IMU to Camera extrinsics (from /camera/extrinsics/depth_to_accel)
+  # Translation: [-0.00552, 0.0051, 0.01174] meters
+  # Rotation: Identity (IMU aligned with camera frame)
+  
+  # Accelerometer noise characteristics (typical for D435i BMI055)
+  AccelerometerNoiseDensity: 0.016  # m/s^2/sqrt(Hz)
+  AccelerometerBiasRandomWalk: 0.0003  # m/s^3/sqrt(Hz)
+  
+  # Gyroscope noise characteristics
+  GyroscopeNoiseDensity: 0.00017  # rad/s/sqrt(Hz) ~0.01 deg/s/sqrt(Hz)
+  GyroscopeBiasRandomWalk: 0.000002  # rad/s^2/sqrt(Hz)
+  
+  # IMU-Camera extrinsics (T_IC: transformation from IMU to Camera)
+  # Position of IMU in camera frame
+  MrMC_x: -0.005520000122487545
+  MrMC_y: 0.005100000184029341
+  MrMC_z: 0.011739999987185001
+  
+  # Quaternion rotation IMU to Camera (identity = no rotation)
+  qCM_w: 1.0
+  qCM_x: 0.0
+  qCM_y: 0.0
+  qCM_z: 0.0
+
+Init:
+  # Initial state covariances
+  State:
+    pos_0: 0.0001
+    pos_1: 0.0001
+    pos_2: 0.0001
+    vel_0: 0.01
+    vel_1: 0.01
+    vel_2: 0.01
+    acb_0: 0.0001
+    acb_1: 0.0001
+    acb_2: 0.0001
+    gyb_0: 0.0001
+    gyb_1: 0.0001
+    gyb_2: 0.0001
+    att_0: 0.001
+    att_1: 0.001
+    att_2: 0.001
+    vep: 0.0001
+    vea: 0.0001
+
+Prediction:
+  # Process noise
+  PredictionNoise:
+    pos_0: 1e-6
+    pos_1: 1e-6
+    pos_2: 1e-6
+    vel_0: 0.0004
+    vel_1: 0.0004
+    vel_2: 0.0004
+    acb_0: 1e-6
+    acb_1: 1e-6
+    acb_2: 1e-6
+    gyb_0: 1e-6
+    gyb_1: 1e-6
+    gyb_2: 1e-6
+    att_0: 0.0001
+    att_1: 0.0001
+    att_2: 0.0001
+    vep: 1e-8
+    vea: 1e-8
+
+Update:
+  # Measurement noise
+  UpdateNoise:
+    pix_0: 2.0  # Pixel noise (std dev in pixels)
+    pix_1: 2.0
+
+  # Feature detection parameters
+  DetectorFrequency: 5  # Hz - run detector every N-th frame
+  FeatureDistance: 30  # Min distance between features (pixels)
+  MaxFeatureCount: 25  # Max features per image
+  
+  # Tracking parameters
+  MatchingPixelThreshold: 30.0
+  MatchingDepthThreshold: 0.5
+  
+  # Patch parameters (for feature matching)
+  PatchSize: 8
+  SearchAreaSize: 40
+  
+  # Outlier rejection
+  HighInnovationThreshold: 5.0  # Chi-square threshold for outlier rejection
