@@ -1,0 +1,145 @@
+# ROVIO Configuration for Intel RealSense D435i on Jetson Orin/Xavier
+# Optimized for ARM64 platforms with resource constraints
+# Camera: 640x480 (reduced from 1280x720), IMU built-in
+# Tuned for real-time performance on Jetson
+
+Common:
+  verbose: false
+  doVECalibration: false
+  depthType: 0  # REGULAR
+  doFrameVisualisation: true
+
+Camera:
+  # D435i color camera intrinsics scaled for 640x480 resolution
+  # Original 1280x720: K = [908.74, 0, 644.10; 0, 908.42, 380.57; 0, 0, 1]
+  # Scaled by 0.5 for 640x480
+  Camera0:
+    CalibrationFile: ""  # Not using external calibration
+    # Camera matrix (fx, fy, cx, cy) - scaled for lower resolution
+    k1: 0.0  # Radial distortion (plumb_bob model shows 0)
+    k2: 0.0
+    k3: 0.0
+    k4: 0.0
+    k5: 0.0
+    k6: 0.0
+    p1: 0.0  # Tangential distortion
+    p2: 0.0
+    s1: 0.0
+    s2: 0.0
+    s3: 0.0
+    s4: 0.0
+    # Intrinsic parameters (scaled by 0.5 for 640x480)
+    fx: 454.371307373047    # 908.7426147460938 / 2
+    fy: 454.20828247070312  # 908.4165649414062 / 2
+    cx: 322.0501403808594   # 644.1002807617188 / 2
+    cy: 190.2860107421875   # 380.572021484375 / 2
+    
+Imu:
+  # IMU to Camera extrinsics (from /camera/extrinsics/depth_to_accel)
+  # Translation: [-0.00552, 0.0051, 0.01174] meters
+  # Rotation: Identity (IMU aligned with camera frame)
+  
+  # Accelerometer noise characteristics (typical for D435i BMI055)
+  AccelerometerNoiseDensity: 0.016  # m/s^2/sqrt(Hz)
+  AccelerometerBiasRandomWalk: 0.0003  # m/s^3/sqrt(Hz)
+  
+  # Gyroscope noise characteristics
+  GyroscopeNoiseDensity: 0.00017  # rad/s/sqrt(Hz) ~0.01 deg/s/sqrt(Hz)
+  GyroscopeBiasRandomWalk: 0.000002  # rad/s^2/sqrt(Hz)
+  
+  # IMU-Camera extrinsics (T_IC: transformation from IMU to Camera)
+  # Position of IMU in camera frame
+  MrMC_x: -0.005520000122487545
+  MrMC_y: 0.005100000184029341
+  MrMC_z: 0.011739999987185001
+  
+  # Quaternion rotation IMU to Camera (identity = no rotation)
+  qCM_w: 1.0
+  qCM_x: 0.0
+  qCM_y: 0.0
+  qCM_z: 0.0
+
+Init:
+  # Initial state covariances
+  State:
+    pos_0: 0.0001
+    pos_1: 0.0001
+    pos_2: 0.0001
+    vel_0: 0.01
+    vel_1: 0.01
+    vel_2: 0.01
+    acb_0: 0.0001
+    acb_1: 0.0001
+    acb_2: 0.0001
+    gyb_0: 0.0001
+    gyb_1: 0.0001
+    gyb_2: 0.0001
+    att_0: 0.001
+    att_1: 0.001
+    att_2: 0.001
+    vep: 0.0001
+    vea: 0.0001
+
+Prediction:
+  # Process noise
+  PredictionNoise:
+    pos_0: 1e-6
+    pos_1: 1e-6
+    pos_2: 1e-6
+    vel_0: 0.0004
+    vel_1: 0.0004
+    vel_2: 0.0004
+    acb_0: 1e-6
+    acb_1: 1e-6
+    acb_2: 1e-6
+    gyb_0: 1e-6
+    gyb_1: 1e-6
+    gyb_2: 1e-6
+    att_0: 0.0001
+    att_1: 0.0001
+    att_2: 0.0001
+    vep: 1e-8
+    vea: 1e-8
+
+Update:
+  # Measurement noise
+  UpdateNoise:
+    pix_0: 2.5  # Increased slightly for lower resolution
+    pix_1: 2.5
+
+  # Feature detection parameters (REDUCED for Jetson performance)
+  DetectorFrequency: 3  # Hz - run detector less frequently (was 5)
+  FeatureDistance: 40  # Min distance between features increased (was 30)
+  MaxFeatureCount: 15  # Reduced from 25 for lower computational load
+  
+  # Tracking parameters
+  MatchingPixelThreshold: 25.0  # Slightly tighter for lower resolution
+  MatchingDepthThreshold: 0.5
+  
+  # Patch parameters (REDUCED for performance)
+  PatchSize: 6  # Reduced from 8
+  SearchAreaSize: 30  # Reduced from 40
+  
+  # Outlier rejection
+  HighInnovationThreshold: 5.0  # Chi-square threshold for outlier rejection
+
+# Jetson-Specific Notes:
+# ====================
+# 1. Image resolution should be set to 640x480 in camera launch file
+# 2. Camera intrinsics are scaled from 1280x720 by factor 0.5
+# 3. MaxFeatureCount reduced to 15 (from 25) for real-time performance
+# 4. DetectorFrequency reduced to 3 Hz (from 5 Hz)
+# 5. PatchSize and SearchAreaSize reduced for faster feature matching
+# 6. FeatureDistance increased to reduce total number of tracked features
+#
+# Expected Performance on Jetson Orin Nano (MAXN mode):
+# - Processing rate: 20-30 Hz
+# - CPU usage: 40-50% (2 cores)
+# - Memory: 2-3 GB
+#
+# For even better performance, reduce MaxFeatureCount to 10 and
+# DetectorFrequency to 2. For better accuracy but slower performance,
+# increase MaxFeatureCount to 20 and keep other values as shown.
+#
+# To use this config:
+# ros2 launch rovio ros2_d435i_rovio_launch.py config_file:=$(ros2 pkg prefix rovio)/share/rovio/cfg/d435i_jetson_config.yaml

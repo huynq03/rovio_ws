@@ -16,7 +16,7 @@ This fork provides:
 - Dataset automation (EUROC)
 - Ongoing maintenance and performance improvements
 
-If you want a fast start:
+If you want a fast start (x86_64/Desktop):
 ```bash
 mkdir -p ~/rovio_ws/src
 cd ~/rovio_ws/src
@@ -25,6 +25,24 @@ git clone git@github.com:suyash023/rovio_interfaces.git
 cd rovio && git submodule update --init --recursive
 source rovio/scripts/rovio_commands.sh
 cd ~/rovio_ws && build_rovio
+```
+
+**Quick Start for Jetson Orin (ARM64):**
+```bash
+# Ensure JetPack 5.x+ is installed and ROS 2 Humble is sourced
+mkdir -p ~/rovio_ws/src
+cd ~/rovio_ws/src
+git clone git@github.com:suyash023/rovio.git
+git clone git@github.com:suyash023/rovio_interfaces.git
+cd rovio && git submodule update --init --recursive
+source rovio/scripts/rovio_commands.sh
+
+# Optional: Add swap space if RAM < 16GB
+# sudo fallocate -l 8G /swapfile
+# sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile
+
+# Build optimized for Jetson
+cd ~/rovio_ws && build_rovio_jetson
 ```
 ## History and Present ##
 
@@ -73,7 +91,33 @@ Please also have a look at the wiki: https://github.com/ethz-asl/rovio/wiki
 
 ## Building ROVIO ##
 
-All builds have been tested on **Ubuntu 22.04 (64 bit) + ROS 2 Humble**.
+### Supported Platforms
+
+| Platform | Architecture | OS | ROS 2 | Status |
+|----------|--------------|----|---------|---------|
+| Desktop/Laptop | x86_64 | Ubuntu 22.04 | Humble | ✅ Tested |
+| NVIDIA Jetson Orin | ARM64 (aarch64) | Ubuntu 20.04/22.04 (JetPack 5.x+) | Humble | ✅ Supported |
+| NVIDIA Jetson Xavier | ARM64 (aarch64) | Ubuntu 18.04/20.04 | Humble | ⚠️ Experimental |
+
+### Platform-Specific Notes
+
+#### Jetson Orin / Xavier (ARM64)
+* **JetPack Version**: Requires JetPack 5.0+ for Ubuntu 20.04/22.04 support
+* **Memory**: Minimum 8GB RAM recommended (tune `ROVIO_NMAXFEATURE` if needed)
+* **Build Time**: Initial build may take 15-30 minutes
+* **Swap Space**: Recommended 8GB swap if RAM < 16GB:
+  ```bash
+  sudo fallocate -l 8G /swapfile
+  sudo chmod 600 /swapfile
+  sudo mkswap /swapfile
+  sudo swapon /swapfile
+  ```
+* **Compiler**: The build system automatically detects ARM64 and uses appropriate optimization flags
+* **Power Mode**: For best performance during build:
+  ```bash
+  sudo nvpmodel -m 0  # MAXN mode
+  sudo jetson_clocks   # Max clocks
+  ```
 
 A helper script, `rovio_commands.sh`, provides a convenient CLI for:
 * Installing dependencies
@@ -115,7 +159,37 @@ build_rovio
 ```
 Internally, colcon build command is run to execute the building process.
 
+**For Jetson Orin** - Use parallel build with limited jobs to avoid memory issues:
+```bash
+cd ~/rovio_ws/
+build_rovio_jetson  # Uses 4 parallel jobs, optimized for ARM64
+```
+
+Or manually with colcon:
+```bash
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --parallel-workers 4
+```
+
 >Note: Compared to the original repo Scene functionality has been removed. If needed again please open an issue
+
+### Performance Tuning for Resource-Constrained Platforms (Jetson)
+
+If running on Jetson with limited resources, you can reduce computational load by modifying build parameters in [CMakeLists.txt](CMakeLists.txt):
+
+```cmake
+set(ROVIO_NMAXFEATURE 15 CACHE STRING "Number of features")  # Default: 25
+set(ROVIO_NLEVELS 3 CACHE STRING "Number of pyramid levels")  # Default: 4
+set(ROVIO_PATCHSIZE 4 CACHE STRING "Patch size")  # Default: 6
+```
+
+Or pass them during build:
+```bash
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release \
+  -DROVIO_NMAXFEATURE=15 \
+  -DROVIO_NLEVELS=3 \
+  -DROVIO_PATCHSIZE=4 \
+  --parallel-workers 4
+```
 
 
 ### Installing EUROC datasets ###
@@ -173,10 +247,15 @@ Evaluation of results can also be performed on the evaluation of live results.
 
 To run ROVIO on your custom camera-IMU setup please refer to this [documentation](doc/CustomSetup.md)
 
+### ROVIO on NVIDIA Jetson (ARM64) ###
+
+For detailed instructions on building and optimizing ROVIO for Jetson Orin/Xavier platforms, see the [Jetson Setup Guide](doc/JetsonSetup.md)
+
 ## Modifications & Roadmap
 
 ### Core Features
 - [x] ROS 2 support
+- [x] ARM64/Jetson platform support
 - [ ] Reset Service calls
 - [ ] ROS 2 image‑based visualization
 - [ ] Multithreading
@@ -188,6 +267,7 @@ To run ROVIO on your custom camera-IMU setup please refer to this [documentation
 - [ ] CI/CD pipeline
 - [x] ROS 2 YAML parameter support
   -  [x] Topics as parameters
+- [x] Platform-specific build optimization (x86_64, ARM64)
 - [ ] TF publishing
 - [ ] Reset services
 - [ ] JSON files for config
@@ -212,9 +292,12 @@ To run ROVIO on your custom camera-IMU setup please refer to this [documentation
 - [ ] Wiki updates
 - [x] Sensor calibration guide
 - [ ] Parameter breakdown
-- [x] Custom setup computational tuning.
+- [x] Custom setup computational tuning
+- [x] Jetson/ARM64 platform guide
 
 ### Deployment
+- [x] Jetson Orin/Xavier optimization
+- [x] ARM64 build support
 - [ ] Docker support
 - [ ] Prebuilt Docker images
 

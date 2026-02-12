@@ -6,9 +6,15 @@
 #Note: run all commands in this file from rovio_ws folder in a terminal
 
 
-#function to build rovio
+#function to build rovio (standard build for x86_64)
 function build_rovio() {
   colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+}
+
+#function to build rovio on Jetson (ARM64) with limited parallel jobs
+function build_rovio_jetson() {
+  echo "Building ROVIO for Jetson Orin/Xavier (ARM64)..."
+  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --parallel-workers 4
 }
 
 #function to build rovio fresh

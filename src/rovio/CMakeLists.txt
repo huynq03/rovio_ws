@@ -4,7 +4,23 @@ project(rovio)
 # Compiler settings
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+
+# Platform-specific optimization flags
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64|arm64")
+  # ARM64 architecture (Jetson Orin, Xavier, etc.)
+  message(STATUS "Detected ARM64 architecture - using ARM-specific optimizations")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mcpu=native -O3")
+  # Add NEON optimizations if available
+  include(CheckCXXCompilerFlag)
+  check_cxx_compiler_flag("-mfpu=neon" HAS_NEON)
+  if(HAS_NEON)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mfpu=neon")
+  endif()
+else()
+  # x86_64 architecture (desktop/laptop)
+  message(STATUS "Detected x86_64 architecture - using x86-specific optimizations")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+endif()
 
 # --- ROVIO parameters ---
 set(ROVIO_NMAXFEATURE 25 CACHE STRING "Number of features for ROVIO")
