@@ -1321,9 +1321,12 @@ Chạy pipeline:
 
 ```bash
 cd ~/rovio_ws
-./run_d435i_rovio_headless.sh
+./run_d435i_rovio_headless.sh # (x-right,y-front, z-up)
 ```
-
+```bash
+cd ~/rovio_ws
+./run_d435i_rovio_headless_flu.sh # đổi hướng (x-front, y-left, z-up)
+```
 Terminal khác xem odometry:
 
 ```bash
@@ -1331,7 +1334,14 @@ source /opt/ros/humble/setup.bash
 source ~/rovio_ws/install/setup.bash
 ros2 topic echo /rovio/odometry
 ```
-
+```bash
+source /opt/ros/humble/setup.bash
+source ~/rovio_ws/install/setup.bash
+#xem tất cả 
+ros2 topic echo /rovio/odometry_flu 
+# Chỉ xem position
+ros2 topic echo /rovio/odometry_flu --field pose.pose.position
+```
 Xem health:
 
 ```bash
