@@ -1,0 +1,4 @@
+source;share/rovio/local_setup.bash
+source;share/rovio/local_setup.dsv
+source;share/rovio/local_setup.sh
+source;share/rovio/local_setup.zsh

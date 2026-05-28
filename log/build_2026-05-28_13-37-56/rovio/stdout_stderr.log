@@ -1,0 +1,321 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building for ARM 64-bit system with arm compile flags
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found OpenCV: /usr (found version "4.5.4") found components: core highgui imgproc features2d 
+-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+-- Found rosbag2_cpp: 0.15.16 (/opt/ros/humble/share/rosbag2_cpp/cmake)
+-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+-- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for module 'yaml-cpp>=0.5'
+--   Found yaml-cpp, version 0.7.0
+-- Found rovio_interfaces: 2.0.0 (/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hann/rovio_ws/build/rovio
+[ 30%] [32mBuilding CXX object CMakeFiles/rovio_lib.dir/src/FeatureDistance.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/rovio_lib.dir/src/Camera.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/rovio_lib.dir/src/FeatureCoordinates.cpp.o[0m
+[ 40%] [32m[1mLinking CXX static library librovio_lib.a[0m
+[ 40%] Built target rovio_lib
+[ 70%] [32mBuilding CXX object CMakeFiles/rovio_node.dir/src/rovio_node.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/rovio_rosbag_loader.dir/src/rovio_rosbag_loader.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/feature_tracker_node.dir/src/feature_tracker_node.cpp.o[0m
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/feature_tracker_node.cpp:29[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/src/../include/rovio/featureTracker.hpp:91:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+   91 |   void imuCallback(const sensor_msgs::msg::Imu::ConstPtr& imu_msg[01;35m[K)[m[K{
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/../include/rovio/featureTracker.hpp:35[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/feature_tracker_node.cpp:29[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:183:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  183 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/feature_tracker_node.cpp:29[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/src/../include/rovio/featureTracker.hpp:109:69:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  109 |   void imgCallback(const sensor_msgs::msg::Image::ConstPtr & img_msg[01;35m[K)[m[K{
+      |                                                                     [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/../include/rovio/featureTracker.hpp:33[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/feature_tracker_node.cpp:29[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:549:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  549 |   void imgCallback0(const sensor_msgs::msg::Image::ConstPtr & img[01;35m[K)[m[K{
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:559:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  559 |   void imgCallback1(const sensor_msgs::msg::Image::ConstPtr & img[01;35m[K)[m[K {
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:569:86:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  569 |   void imgCallback(const sensor_msgs::msg::Image::ConstPtr & img, const int camID = 0[01;35m[K)[m[K{
+      |                                                                                      [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:632:85:[m[K [01;35m[Kwarning: [m[K‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  632 |   void groundtruthOdometryCallback(const nav_msgs::msg::Odometry::ConstPtr& odometry[01;35m[K)[m[K {
+      |                                                                                     [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:41[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:147:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  147 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:651:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  651 |   void imuCallback(const sensor_msgs::msg::Imu::ConstPtr& imu_msg[01;35m[K)[m[K{
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:45[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:183:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  183 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:689:83:[m[K [01;35m[Kwarning: [m[K‘[01m[Kgeometry_msgs::msg::TwistStamped_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  689 |   void velocityCallback(const geometry_msgs::msg::TwistStamped::ConstPtr& velocity[01;35m[K)[m[K{
+      |                                                                                   [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist_stamped.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:39[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_node.cpp:41[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_stamped__struct.hpp:116:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  116 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:549:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  549 |   void imgCallback0(const sensor_msgs::msg::Image::ConstPtr & img[01;35m[K)[m[K{
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:559:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  559 |   void imgCallback1(const sensor_msgs::msg::Image::ConstPtr & img[01;35m[K)[m[K {
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:569:86:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  569 |   void imgCallback(const sensor_msgs::msg::Image::ConstPtr & img, const int camID = 0[01;35m[K)[m[K{
+      |                                                                                      [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:632:85:[m[K [01;35m[Kwarning: [m[K‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  632 |   void groundtruthOdometryCallback(const nav_msgs::msg::Odometry::ConstPtr& odometry[01;35m[K)[m[K {
+      |                                                                                     [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:41[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:147:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  147 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:651:66:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  651 |   void imuCallback(const sensor_msgs::msg::Imu::ConstPtr& imu_msg[01;35m[K)[m[K{
+      |                                                                  [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:45[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:183:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  183 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:689:83:[m[K [01;35m[Kwarning: [m[K‘[01m[Kgeometry_msgs::msg::TwistStamped_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  689 |   void velocityCallback(const geometry_msgs::msg::TwistStamped::ConstPtr& velocity[01;35m[K)[m[K{
+      |                                                                                   [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist_stamped.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:39[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_stamped__struct.hpp:116:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  116 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:281:39:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Imu_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  281 |       sensor_msgs::msg::Imu::ConstPtr [01;35m[KimuMsgPtr[m[K = std::make_shared<sensor_msgs::msg::Imu>(imuMsg);
+      |                                       [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:45[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:183:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  183 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:286:41:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  286 |       sensor_msgs::msg::Image::ConstPtr [01;35m[KimgMsgPtr[m[K = std::make_shared<sensor_msgs::msg::Image>(imgMsg);
+      |                                         [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:291:41:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  291 |       sensor_msgs::msg::Image::ConstPtr [01;35m[KimgMsg2Ptr[m[K = std::make_shared<sensor_msgs::msg::Image>(imgMsg2);
+      |                                         [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/include/rovio/RovioNode.hpp:36[m[K,
+                 from [01m[K/home/hann/rovio_ws/src/rovio/src/rovio_rosbag_loader.cpp:40[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:174:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  174 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[ 80%] [32m[1mLinking CXX executable feature_tracker_node[0m
+[ 80%] Built target feature_tracker_node
+[ 90%] [32m[1mLinking CXX executable rovio_node[0m
+[ 90%] Built target rovio_node
+[100%] [32m[1mLinking CXX executable rovio_rosbag_loader[0m
+[100%] Built target rovio_rosbag_loader
+-- Install configuration: "Release"
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/GIFPrediction.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/FilterBase.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/Prediction.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/CoordinateTransform.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/OutlierDetection.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/TestClasses.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/FilterState.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/ModelBase.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/PropertyHandler.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/common.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/State.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/Update.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/include/lightweight_filtering/lightweight_filtering/SigmaPoints.hpp
+-- Installing: /home/hann/rovio_ws/install/rovio/share/lightweight_filtering/cmake/FindLWF.cmake
+-- Execute custom install script
+-- Symlinking: /home/hann/rovio_ws/install/rovio/lib/rovio/librovio_lib.a
+-- Symlinking: /home/hann/rovio_ws/install/rovio/lib/rovio/rovio_node
+-- Symlinking: /home/hann/rovio_ws/install/rovio/lib/rovio/rovio_rosbag_loader
+-- Symlinking: /home/hann/rovio_ws/install/rovio/lib/rovio/feature_tracker_node
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/Camera.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/CoordinateTransform/FeatureOutput.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/CoordinateTransform/FeatureOutputReadable.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/CoordinateTransform/LandmarkOutput.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/CoordinateTransform/PixelOutput.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/CoordinateTransform/RovioOutput.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/CoordinateTransform/YprOutput.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/FeatureCoordinates.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/FeatureDistance.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/FeatureManager.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/FeatureStatistics.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/FilterStates.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/HealthMonitor.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/ImagePyramid.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/ImgUpdate.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/ImuPrediction.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/MultiCamera.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/MultilevelPatch.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/MultilevelPatchAlignment.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/Patch.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/PoseUpdate.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/RobocentricFeatureElement.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/RovioFilter.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/RovioNode.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/RovioScene.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/Scene.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/VelocityUpdate.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/ZeroVelocityUpdate.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/exceptions.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/include//rovio/featureTracker.hpp
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/launch/ros2_rovio_node_launch.py
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/launch/ros2_rovio_node_launch.yaml
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/launch/ros2_rovio_rosbag_loader_launch.py
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/launch/ros2_rovio_rosbag_loader_launch.yaml
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cfg/euroc_cam0.yaml
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cfg/euroc_cam1.yaml
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cfg/p22021_equidist.yaml
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cfg/rovio.info
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/environment/library_path.sh
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/environment/library_path.dsv
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/ament_index/resource_index/package_run_dependencies/rovio
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/ament_index/resource_index/parent_prefix_path/rovio
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/environment/ament_prefix_path.sh
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/environment/ament_prefix_path.dsv
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/environment/path.sh
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/environment/path.dsv
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/local_setup.bash
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/local_setup.sh
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/local_setup.zsh
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/local_setup.dsv
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/package.dsv
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/ament_index/resource_index/packages/rovio
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cmake/rovioConfig.cmake
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/cmake/rovioConfig-version.cmake
+-- Symlinking: /home/hann/rovio_ws/install/rovio/share/rovio/package.xml

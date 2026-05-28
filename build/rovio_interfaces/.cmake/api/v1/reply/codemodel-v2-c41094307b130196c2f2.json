@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-eff6ed55cc1cef7e37c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "rovio_interfaces__py",
+					"jsonFile" : "directory-rovio_interfaces__py-Release-bc3f327088f0c2b93fcf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/hann/rovio_ws/build/rovio_interfaces/rovio_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "rovio_interfaces__rs",
+					"jsonFile" : "directory-rovio_interfaces__rs-Release-9cbbe2d7158ca3c319ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/hann/rovio_ws/build/rovio_interfaces/rovio_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "rovio_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_rovio_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_rovio_interfaces_egg-Release-802c6bd9adf85a970fb7.json",
+					"name" : "ament_cmake_python_build_rovio_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_rovio_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_rovio_interfaces-Release-e018e7d6b3809b571b70.json",
+					"name" : "ament_cmake_python_symlink_rovio_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces-Release-7b0774e29c185bf3ea4c.json",
+					"name" : "rovio_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__cpp-Release-de0802fcdeeaa6b8b0ec.json",
+					"name" : "rovio_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rovio_interfaces__py::@8e29caa535376615b44c",
+					"jsonFile" : "target-rovio_interfaces__py-Release-56346989d8946909577c.json",
+					"name" : "rovio_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_generator_c-Release-2ff9eacedd983c3098cd.json",
+					"name" : "rovio_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_generator_py-Release-d87eef433f87a3f5d186.json",
+					"name" : "rovio_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_c-Release-f3f45b2c3307800fb095.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_c__pyext-Release-c05d40e537ebd0e8b64b.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_cpp-Release-b33d0e9cbbda36bfc18d.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_fastrtps_c-Release-3ebd8e9ac58ada605ac0.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_fastrtps_c__pyext-Release-eb76d8747c6db1b255c3.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_fastrtps_cpp-Release-d3ee07fc919bdceb368a.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_introspection_c-Release-6d406bf1c5ea31d57793.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_introspection_c__pyext-Release-52e0d72d2169cd4135b7.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces__rosidl_typesupport_introspection_cpp-Release-7a6481c39c0c60c5f2c1.json",
+					"name" : "rovio_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "rovio_interfaces__rs::@7d747f0e98ded215ae85",
+					"jsonFile" : "target-rovio_interfaces__rs-Release-cd39f3ff2f55b2592d0e.json",
+					"name" : "rovio_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_interfaces_uninstall-Release-0a8146c54a68afed6bb0.json",
+					"name" : "rovio_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-d5d28c1bd6dd7c31248b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hann/rovio_ws/build/rovio_interfaces",
+		"source" : "/home/hann/rovio_ws/src/rovio_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

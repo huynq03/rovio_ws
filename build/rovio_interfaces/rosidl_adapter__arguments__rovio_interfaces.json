@@ -1,0 +1,7 @@
+{
+  "package_name": "rovio_interfaces",
+  "non_idl_tuples": [
+    "/home/hann/rovio_ws/src/rovio_interfaces:srv/SrvResetToPose.srv",
+    "/home/hann/rovio_ws/src/rovio_interfaces:msg/Health.msg"
+  ]
+}

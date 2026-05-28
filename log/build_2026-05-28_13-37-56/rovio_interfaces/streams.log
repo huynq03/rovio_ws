@@ -1,0 +1,242 @@
+[0.015s] Invoking command in '/home/hann/rovio_ws/build/rovio_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hann/rovio_ws/src/rovio_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hann/rovio_ws/install/rovio_interfaces
+[0.160s] -- The C compiler identification is GNU 11.4.0
+[0.272s] -- The CXX compiler identification is GNU 11.4.0
+[0.294s] -- Detecting C compiler ABI info
+[0.430s] -- Detecting C compiler ABI info - done
+[0.454s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.456s] -- Detecting C compile features
+[0.457s] -- Detecting C compile features - done
+[0.468s] -- Detecting CXX compiler ABI info
+[0.622s] -- Detecting CXX compiler ABI info - done
+[0.647s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.648s] -- Detecting CXX compile features
+[0.650s] -- Detecting CXX compile features - done
+[0.661s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.976s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.115s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.187s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.264s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.274s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.291s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.313s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.341s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.411s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.190s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[3.230s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.646s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.700s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[3.705s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.774s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[3.775s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.775s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.775s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[3.823s] -- Found PythonExtra: .so  
+[4.205s] -- Configuring done
+[4.293s] -- Generating done
+[4.316s] -- Build files have been written to: /home/hann/rovio_ws/build/rovio_interfaces
+[4.339s] Invoked command in '/home/hann/rovio_ws/build/rovio_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hann/rovio_ws/src/rovio_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hann/rovio_ws/install/rovio_interfaces
+[4.345s] Invoking command in '/home/hann/rovio_ws/build/rovio_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hann/rovio_ws/build/rovio_interfaces -- -j6 -l6
+[4.420s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.438s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.440s] [  7%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[4.454s] [  7%] Built target ament_cmake_python_symlink_rovio_interfaces
+[4.977s] running egg_info
+[4.979s] creating rovio_interfaces.egg-info
+[4.979s] writing rovio_interfaces.egg-info/PKG-INFO
+[4.980s] writing dependency_links to rovio_interfaces.egg-info/dependency_links.txt
+[4.981s] writing top-level names to rovio_interfaces.egg-info/top_level.txt
+[4.983s] writing manifest file 'rovio_interfaces.egg-info/SOURCES.txt'
+[4.989s] reading manifest file 'rovio_interfaces.egg-info/SOURCES.txt'
+[4.991s] writing manifest file 'rovio_interfaces.egg-info/SOURCES.txt'
+[5.012s] [  7%] Built target rovio_interfaces__rs
+[5.065s] [  7%] Built target ament_cmake_python_build_rovio_interfaces_egg
+[5.143s] [  7%] Built target rovio_interfaces__cpp
+[5.163s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.163s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.163s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.191s] [ 20%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rovio_interfaces/srv/detail/srv_reset_to_pose__functions.c.o[0m
+[5.192s] [ 20%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_generator_c.dir/rosidl_generator_c/rovio_interfaces/msg/detail/health__functions.c.o[0m
+[5.495s] [ 22%] [32m[1mLinking C shared library librovio_interfaces__rosidl_generator_c.so[0m
+[5.561s] [ 22%] Built target rovio_interfaces__rosidl_generator_c
+[5.579s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.589s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[5.591s] [ 30%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.736s] [ 32%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rovio_interfaces/srv/srv_reset_to_pose__type_support.cpp.o[0m
+[5.843s] [ 35%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rovio_interfaces/srv/detail/srv_reset_to_pose__type_support.cpp.o[0m
+[5.877s] [ 37%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rovio_interfaces/srv/detail/dds_fastrtps/srv_reset_to_pose__type_support.cpp.o[0m
+[6.148s] [ 40%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rovio_interfaces/srv/srv_reset_to_pose__type_support.cpp.o[0m
+[6.236s] [ 42%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/rovio_interfaces/msg/health__type_support.cpp.o[0m
+[6.292s] [ 45%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rovio_interfaces/srv/detail/srv_reset_to_pose__type_support.c.o[0m
+[6.307s] [ 47%] [32m[1mLinking CXX shared library librovio_interfaces__rosidl_typesupport_c.so[0m
+[6.360s] [ 50%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rovio_interfaces/srv/detail/srv_reset_to_pose__type_support_c.cpp.o[0m
+[6.371s] [ 52%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rovio_interfaces/msg/health__type_support.cpp.o[0m
+[6.400s] [ 52%] Built target rovio_interfaces__rosidl_typesupport_c
+[6.414s] [ 55%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rovio_interfaces/msg/detail/health__type_support.c.o[0m
+[6.418s] [ 57%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rovio_interfaces/msg/detail/health__type_support_c.cpp.o[0m
+[6.509s] [ 60%] [32m[1mLinking C shared library librovio_interfaces__rosidl_typesupport_introspection_c.so[0m
+[6.574s] [ 60%] Built target rovio_interfaces__rosidl_typesupport_introspection_c
+[6.592s] [ 62%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rovio_interfaces/msg/detail/health__type_support.cpp.o[0m
+[6.826s] [ 65%] [32mBuilding CXX object CMakeFiles/rovio_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rovio_interfaces/msg/detail/dds_fastrtps/health__type_support.cpp.o[0m
+[6.986s] [ 67%] [32m[1mLinking CXX shared library librovio_interfaces__rosidl_typesupport_cpp.so[0m
+[7.075s] [ 67%] Built target rovio_interfaces__rosidl_typesupport_cpp
+[7.323s] [ 70%] [32m[1mLinking CXX shared library librovio_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[7.475s] [ 70%] Built target rovio_interfaces__rosidl_typesupport_fastrtps_c
+[7.500s] [ 72%] [32m[1mLinking CXX shared library librovio_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[7.627s] [ 72%] Built target rovio_interfaces__rosidl_typesupport_introspection_cpp
+[7.805s] [ 75%] [32m[1mLinking CXX shared library librovio_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[7.951s] [ 75%] Built target rovio_interfaces__rosidl_typesupport_fastrtps_cpp
+[7.991s] [ 75%] Built target rovio_interfaces
+[8.032s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[8.999s] [ 77%] Built target rovio_interfaces__py
+[9.037s] [ 82%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rovio_interfaces/msg/_health_s.c.o[0m
+[9.038s] [ 82%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_generator_py.dir/rosidl_generator_py/rovio_interfaces/srv/_srv_reset_to_pose_s.c.o[0m
+[9.336s] [ 85%] [32m[1mLinking C shared library rosidl_generator_py/rovio_interfaces/librovio_interfaces__rosidl_generator_py.so[0m
+[9.414s] [ 85%] Built target rovio_interfaces__rosidl_generator_py
+[9.453s] [ 92%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/rovio_interfaces/_rovio_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[9.453s] [ 92%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/rovio_interfaces/_rovio_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[9.453s] [ 92%] [32mBuilding C object CMakeFiles/rovio_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/rovio_interfaces/_rovio_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[9.765s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[9.765s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[9.765s] [100%] [32m[1mLinking C shared library rosidl_generator_py/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[9.844s] [100%] Built target rovio_interfaces__rosidl_typesupport_introspection_c__pyext
+[9.844s] [100%] Built target rovio_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[9.850s] [100%] Built target rovio_interfaces__rosidl_typesupport_c__pyext
+[9.878s] Invoked command in '/home/hann/rovio_ws/build/rovio_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hann/rovio_ws/build/rovio_interfaces -- -j6 -l6
+[9.899s] Invoking command in '/home/hann/rovio_ws/build/rovio_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hann/rovio_ws/build/rovio_interfaces
+[9.915s] -- Install configuration: "Release"
+[9.916s] -- Execute custom install script
+[9.917s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/ament_index/resource_index/rosidl_interfaces/rovio_interfaces
+[9.935s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__functions.h
+[9.953s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__struct.h
+[9.970s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__type_support.h
+[9.987s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/health.h
+[10.005s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/rosidl_generator_c__visibility_control.h
+[10.024s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__functions.h
+[10.043s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__struct.h
+[10.062s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__type_support.h
+[10.079s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/srv_reset_to_pose.h
+[10.097s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/library_path.sh
+[10.115s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/library_path.dsv
+[10.132s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__rosidl_typesupport_fastrtps_c.h
+[10.150s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.169s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__rosidl_typesupport_fastrtps_c.h
+[10.189s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__builder.hpp
+[10.206s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__struct.hpp
+[10.225s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__traits.hpp
+[10.243s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__type_support.hpp
+[10.260s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/health.hpp
+[10.279s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[10.296s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__builder.hpp
+[10.316s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__struct.hpp
+[10.335s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__traits.hpp
+[10.352s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__type_support.hpp
+[10.373s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/srv_reset_to_pose.hpp
+[10.394s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__rosidl_typesupport_fastrtps_cpp.hpp
+[10.412s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.430s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[10.450s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__rosidl_typesupport_introspection_c.h
+[10.468s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.484s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__rosidl_typesupport_introspection_c.h
+[10.505s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/msg/detail/health__rosidl_typesupport_introspection_cpp.hpp
+[10.526s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/include/rovio_interfaces/rovio_interfaces/srv/detail/srv_reset_to_pose__rosidl_typesupport_introspection_cpp.hpp
+[10.544s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/pythonpath.sh
+[10.561s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/pythonpath.dsv
+[10.581s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces-2.0.0-py3.10.egg-info/PKG-INFO
+[10.599s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces-2.0.0-py3.10.egg-info/SOURCES.txt
+[10.616s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces-2.0.0-py3.10.egg-info/dependency_links.txt
+[10.634s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces-2.0.0-py3.10.egg-info/top_level.txt
+[10.654s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/__init__.py
+[10.673s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/_rovio_interfaces_s.ep.rosidl_typesupport_c.c
+[10.691s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/_rovio_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[10.708s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/_rovio_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[10.725s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/librovio_interfaces__rosidl_generator_py.so
+[10.744s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/msg/__init__.py
+[10.762s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/msg/_health.py
+[10.780s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/msg/_health_s.c
+[10.798s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[10.815s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[10.832s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[10.849s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/srv/__init__.py
+[10.866s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/srv/_srv_reset_to_pose.py
+[10.887s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/srv/_srv_reset_to_pose_s.c
+[10.905s] -- Up-to-date symlink: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[10.906s] -- Up-to-date symlink: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[10.907s] -- Up-to-date symlink: /home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/rovio_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[10.907s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/ament_index/resource_index/rust_packages/rovio_interfaces
+[10.926s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/rust/Cargo.toml
+[10.944s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/rust/build.rs
+[10.962s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/rust/src/lib.rs
+[10.980s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/rust/src/msg.rs
+[10.997s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/rust/src/msg/rmw.rs
+[11.015s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/rust/src/srv.rs
+[11.032s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/rust/src/srv/rmw.rs
+[11.050s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/srv/SrvResetToPose.idl
+[11.067s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/msg/Health.idl
+[11.085s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/srv/SrvResetToPose.srv
+[11.103s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/srv/SrvResetToPose_Request.msg
+[11.120s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/srv/SrvResetToPose_Response.msg
+[11.137s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/msg/Health.msg
+[11.155s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/ament_index/resource_index/package_run_dependencies/rovio_interfaces
+[11.172s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/ament_index/resource_index/parent_prefix_path/rovio_interfaces
+[11.189s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/ament_prefix_path.sh
+[11.207s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/ament_prefix_path.dsv
+[11.224s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/path.sh
+[11.244s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/environment/path.dsv
+[11.261s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/local_setup.bash
+[11.277s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/local_setup.sh
+[11.293s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/local_setup.zsh
+[11.309s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/local_setup.dsv
+[11.329s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.dsv
+[11.348s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/ament_index/resource_index/packages/rovio_interfaces
+[11.367s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rosidl_cmake-extras.cmake
+[11.384s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.402s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.420s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[11.438s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[11.457s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[11.476s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[11.493s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfacesConfig.cmake
+[11.512s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfacesConfig-version.cmake
+[11.530s] -- Symlinking: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.xml
+[11.550s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_generator_c.so
+[11.551s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_generator_c.so" to ""
+[11.551s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_fastrtps_c.so
+[11.552s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[11.552s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[11.553s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[11.554s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_introspection_c.so
+[11.555s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[11.555s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_c.so
+[11.556s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_c.so" to ""
+[11.556s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_introspection_cpp.so
+[11.557s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[11.557s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_cpp.so
+[11.558s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_typesupport_cpp.so" to ""
+[11.634s] Listing '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces'...
+[11.634s] Compiling '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/__init__.py'...
+[11.634s] Listing '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/msg'...
+[11.634s] Compiling '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/msg/__init__.py'...
+[11.634s] Compiling '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/msg/_health.py'...
+[11.634s] Listing '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/srv'...
+[11.634s] Compiling '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/srv/__init__.py'...
+[11.634s] Compiling '/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages/rovio_interfaces/srv/_srv_reset_to_pose.py'...
+[11.647s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_generator_py.so
+[11.648s] -- Set runtime path of "/home/hann/rovio_ws/install/rovio_interfaces/lib/librovio_interfaces__rosidl_generator_py.so" to ""
+[11.649s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_generator_cExport.cmake
+[11.649s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_generator_cExport-release.cmake
+[11.650s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[11.650s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_typesupport_fastrtps_cExport-release.cmake
+[11.651s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_generator_cppExport.cmake
+[11.651s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[11.652s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[11.652s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[11.653s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_introspection_cExport-release.cmake
+[11.653s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_cExport.cmake
+[11.654s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_cExport-release.cmake
+[11.654s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[11.655s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_introspection_cppExport-release.cmake
+[11.655s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_cppExport.cmake
+[11.656s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/rovio_interfaces__rosidl_typesupport_cppExport-release.cmake
+[11.657s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_generator_pyExport.cmake
+[11.657s] -- Installing: /home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/cmake/export_rovio_interfaces__rosidl_generator_pyExport-release.cmake
+[11.665s] Invoked command in '/home/hann/rovio_ws/build/rovio_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hann/rovio_ws/build/rovio_interfaces

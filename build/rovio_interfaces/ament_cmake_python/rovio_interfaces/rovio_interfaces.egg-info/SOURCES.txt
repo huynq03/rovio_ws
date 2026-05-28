@@ -1,0 +1,6 @@
+setup.py
+rovio_interfaces/__init__.py
+rovio_interfaces.egg-info/PKG-INFO
+rovio_interfaces.egg-info/SOURCES.txt
+rovio_interfaces.egg-info/dependency_links.txt
+rovio_interfaces.egg-info/top_level.txt

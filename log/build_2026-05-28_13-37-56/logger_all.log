@@ -1,0 +1,213 @@
+[0.217s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-args', '-DCMAKE_BUILD_TYPE=Release']
+[0.217s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DCMAKE_BUILD_TYPE=Release'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8ff54b80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff90061fc0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff90061fc0>>)
+[0.572s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.573s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.573s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.573s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.573s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.573s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.573s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/hann/rovio_ws'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.662s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.663s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.665s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extensions ['ignore', 'ignore_ament_install']
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extension 'ignore'
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extension 'ignore_ament_install'
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extensions ['colcon_pkg']
+[0.666s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extension 'colcon_pkg'
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extensions ['colcon_meta']
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extension 'colcon_meta'
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extensions ['ros']
+[0.667s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio) by extension 'ros'
+[0.675s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rovio' with type 'ros.ament_cmake' and name 'rovio'
+[0.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extension 'ignore'
+[0.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extension 'ignore_ament_install'
+[0.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extensions ['colcon_pkg']
+[0.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extension 'colcon_pkg'
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extensions ['colcon_meta']
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extension 'colcon_meta'
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extensions ['ros']
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/rovio_interfaces) by extension 'ros'
+[0.677s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rovio_interfaces' with type 'ros.ament_cmake' and name 'rovio_interfaces'
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.678s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.716s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.721s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 278 installed packages in /opt/ros/humble
+[0.724s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.799s] Level 5:colcon.colcon_core.verb:set package 'rovio_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.799s] DEBUG:colcon.colcon_core.verb:Building package 'rovio_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hann/rovio_ws/build/rovio_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hann/rovio_ws/install/rovio_interfaces', 'merge_install': False, 'path': '/home/hann/rovio_ws/src/rovio_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'cmake_target' from command line to 'None'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'cmake_clean_cache' from command line to 'False'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'cmake_clean_first' from command line to 'False'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'cmake_force_configure' from command line to 'False'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'ament_cmake_args' from command line to 'None'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'catkin_cmake_args' from command line to 'None'
+[0.800s] Level 5:colcon.colcon_core.verb:set package 'rovio' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.801s] DEBUG:colcon.colcon_core.verb:Building package 'rovio' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hann/rovio_ws/build/rovio', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hann/rovio_ws/install/rovio', 'merge_install': False, 'path': '/home/hann/rovio_ws/src/rovio', 'symlink_install': True, 'test_result_base': None}
+[0.801s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.803s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.803s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hann/rovio_ws/src/rovio_interfaces' with build type 'ament_cmake'
+[0.804s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hann/rovio_ws/src/rovio_interfaces'
+[0.807s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.808s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.808s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.820s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hann/rovio_ws/build/rovio_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hann/rovio_ws/src/rovio_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hann/rovio_ws/install/rovio_interfaces
+[5.144s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hann/rovio_ws/build/rovio_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hann/rovio_ws/src/rovio_interfaces -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hann/rovio_ws/install/rovio_interfaces
+[5.149s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hann/rovio_ws/build/rovio_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hann/rovio_ws/build/rovio_interfaces -- -j6 -l6
+[10.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hann/rovio_ws/build/rovio_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hann/rovio_ws/build/rovio_interfaces -- -j6 -l6
+[10.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hann/rovio_ws/build/rovio_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hann/rovio_ws/build/rovio_interfaces
+[12.467s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rovio_interfaces)
+[12.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hann/rovio_ws/build/rovio_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hann/rovio_ws/build/rovio_interfaces
+[12.477s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces' for CMake module files
+[12.480s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces' for CMake config files
+[12.484s] Level 1:colcon.colcon_core.shell:create_environment_hook('rovio_interfaces', 'cmake_prefix_path')
+[12.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/cmake_prefix_path.ps1'
+[12.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/cmake_prefix_path.dsv'
+[12.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/cmake_prefix_path.sh'
+[12.492s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/lib'
+[12.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('rovio_interfaces', 'ld_library_path_lib')
+[12.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/ld_library_path_lib.ps1'
+[12.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/ld_library_path_lib.dsv'
+[12.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/ld_library_path_lib.sh'
+[12.497s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/bin'
+[12.497s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/lib/pkgconfig/rovio_interfaces.pc'
+[12.498s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/lib/python3.10/site-packages'
+[12.500s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/bin'
+[12.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.ps1'
+[12.505s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.dsv'
+[12.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.sh'
+[12.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.bash'
+[12.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.zsh'
+[12.515s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hann/rovio_ws/install/rovio_interfaces/share/colcon-core/packages/rovio_interfaces)
+[12.517s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rovio_interfaces)
+[12.518s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces' for CMake module files
+[12.520s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces' for CMake config files
+[12.524s] Level 1:colcon.colcon_core.shell:create_environment_hook('rovio_interfaces', 'cmake_prefix_path')
+[12.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/cmake_prefix_path.ps1'
+[12.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/cmake_prefix_path.dsv'
+[12.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/cmake_prefix_path.sh'
+[12.529s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/lib'
+[12.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('rovio_interfaces', 'ld_library_path_lib')
+[12.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/ld_library_path_lib.ps1'
+[12.531s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/ld_library_path_lib.dsv'
+[12.532s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/hook/ld_library_path_lib.sh'
+[12.533s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/bin'
+[12.533s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/lib/pkgconfig/rovio_interfaces.pc'
+[12.534s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/lib/python3.10/site-packages'
+[12.535s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio_interfaces/bin'
+[12.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.ps1'
+[12.538s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.dsv'
+[12.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.sh'
+[12.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.bash'
+[12.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio_interfaces/share/rovio_interfaces/package.zsh'
+[12.542s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hann/rovio_ws/install/rovio_interfaces/share/colcon-core/packages/rovio_interfaces)
+[12.543s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hann/rovio_ws/src/rovio' with build type 'ament_cmake'
+[12.544s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hann/rovio_ws/src/rovio'
+[12.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.544s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.568s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hann/rovio_ws/build/rovio': AMENT_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hann/rovio_ws/install/rovio_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/hann/rovio_ws/src/rovio -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hann/rovio_ws/install/rovio
+[15.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hann/rovio_ws/build/rovio' returned '0': AMENT_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hann/rovio_ws/install/rovio_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/hann/rovio_ws/src/rovio -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hann/rovio_ws/install/rovio
+[15.603s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hann/rovio_ws/build/rovio': AMENT_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hann/rovio_ws/install/rovio_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/hann/rovio_ws/build/rovio -- -j6 -l6
+[496.039s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hann/rovio_ws/build/rovio' returned '0': AMENT_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hann/rovio_ws/install/rovio_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/hann/rovio_ws/build/rovio -- -j6 -l6
+[496.056s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hann/rovio_ws/build/rovio': AMENT_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hann/rovio_ws/install/rovio_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/hann/rovio_ws/build/rovio
+[497.271s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rovio)
+[497.276s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio' for CMake module files
+[497.278s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hann/rovio_ws/build/rovio' returned '0': AMENT_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hann/rovio_ws/install/rovio_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/hann/rovio_ws/install/rovio_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/hann/rovio_ws/install/rovio_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/hann/rovio_ws/build/rovio
+[497.280s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio' for CMake config files
+[497.283s] Level 1:colcon.colcon_core.shell:create_environment_hook('rovio', 'cmake_prefix_path')
+[497.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio/share/rovio/hook/cmake_prefix_path.ps1'
+[497.291s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hann/rovio_ws/install/rovio/share/rovio/hook/cmake_prefix_path.dsv'
+[497.293s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio/share/rovio/hook/cmake_prefix_path.sh'
+[497.296s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/lib'
+[497.296s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/bin'
+[497.296s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/lib/pkgconfig/rovio.pc'
+[497.298s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/lib/python3.10/site-packages'
+[497.299s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/bin'
+[497.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.ps1'
+[497.302s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hann/rovio_ws/install/rovio/share/rovio/package.dsv'
+[497.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.sh'
+[497.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.bash'
+[497.306s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.zsh'
+[497.308s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hann/rovio_ws/install/rovio/share/colcon-core/packages/rovio)
+[497.310s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rovio)
+[497.310s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio' for CMake module files
+[497.312s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio' for CMake config files
+[497.314s] Level 1:colcon.colcon_core.shell:create_environment_hook('rovio', 'cmake_prefix_path')
+[497.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio/share/rovio/hook/cmake_prefix_path.ps1'
+[497.317s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hann/rovio_ws/install/rovio/share/rovio/hook/cmake_prefix_path.dsv'
+[497.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hann/rovio_ws/install/rovio/share/rovio/hook/cmake_prefix_path.sh'
+[497.320s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/lib'
+[497.320s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/bin'
+[497.320s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/lib/pkgconfig/rovio.pc'
+[497.321s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/lib/python3.10/site-packages'
+[497.322s] Level 1:colcon.colcon_core.environment:checking '/home/hann/rovio_ws/install/rovio/bin'
+[497.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.ps1'
+[497.325s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hann/rovio_ws/install/rovio/share/rovio/package.dsv'
+[497.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.sh'
+[497.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.bash'
+[497.329s] INFO:colcon.colcon_core.shell:Creating package script '/home/hann/rovio_ws/install/rovio/share/rovio/package.zsh'
+[497.330s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hann/rovio_ws/install/rovio/share/colcon-core/packages/rovio)
+[497.331s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[497.334s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[497.334s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[497.335s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[497.338s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[497.339s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hann/rovio_ws/install/local_setup.ps1'
+[497.343s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hann/rovio_ws/install/_local_setup_util_ps1.py'
+[497.347s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hann/rovio_ws/install/setup.ps1'
+[497.351s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hann/rovio_ws/install/local_setup.sh'
+[497.353s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hann/rovio_ws/install/_local_setup_util_sh.py'
+[497.354s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hann/rovio_ws/install/setup.sh'
+[497.357s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hann/rovio_ws/install/local_setup.bash'
+[497.358s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hann/rovio_ws/install/setup.bash'
+[497.361s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hann/rovio_ws/install/local_setup.zsh'
+[497.363s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hann/rovio_ws/install/setup.zsh'

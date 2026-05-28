@@ -1,0 +1,1 @@
+/home/hann/rovio_ws/build/rovio_interfaces/rosidl_generator_rs/rovio_interfaces/rust/src/lib.rs

@@ -1,0 +1,2 @@
+/usr/bin/ar qc librovio_lib.a CMakeFiles/rovio_lib.dir/src/Camera.cpp.o CMakeFiles/rovio_lib.dir/src/FeatureCoordinates.cpp.o CMakeFiles/rovio_lib.dir/src/FeatureDistance.cpp.o
+/usr/bin/ranlib librovio_lib.a

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/hann/rovio_ws/build/rovio/librovio_lib.a" "/home/hann/rovio_ws/build/rovio/rovio_node" "/home/hann/rovio_ws/build/rovio/rovio_rosbag_loader" "/home/hann/rovio_ws/build/rovio/feature_tracker_node" "TARGETS" "rovio_lib" "rovio_node" "rovio_rosbag_loader" "feature_tracker_node" "DESTINATION" "lib/rovio")

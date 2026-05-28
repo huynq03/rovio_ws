@@ -1,0 +1,3 @@
+source;share/rovio/environment/ament_prefix_path.sh
+source;share/rovio/environment/library_path.sh
+source;share/rovio/environment/path.sh

@@ -1,0 +1,134 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-931fe6aa1cdc3cf122b6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "lightweight_filtering",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lightweight_filtering-Release-5f2b8d242849b3209ee0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lightweight_filtering"
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rovio",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "lightweight_filtering",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "feature_tracker_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-feature_tracker_node-Release-2536e8cc3381b22a8c19.json",
+					"name" : "feature_tracker_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_lib-Release-bf5956c9db71c8f043c2.json",
+					"name" : "rovio_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_node-Release-5118c7591ff454de54be.json",
+					"name" : "rovio_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_rosbag_loader::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_rosbag_loader-Release-c95da70627e5f537b4c5.json",
+					"name" : "rovio_rosbag_loader",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rovio_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rovio_uninstall-Release-1dadbcf2066f94c9eb63.json",
+					"name" : "rovio_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-acd165d448996f8d5d87.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hann/rovio_ws/build/rovio",
+		"source" : "/home/hann/rovio_ws/src/rovio"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

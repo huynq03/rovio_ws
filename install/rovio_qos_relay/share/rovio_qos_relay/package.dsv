@@ -1,0 +1,9 @@
+source;share/rovio_qos_relay/hook/pythonpath.ps1
+source;share/rovio_qos_relay/hook/pythonpath.dsv
+source;share/rovio_qos_relay/hook/pythonpath.sh
+source;share/rovio_qos_relay/hook/ament_prefix_path.ps1
+source;share/rovio_qos_relay/hook/ament_prefix_path.dsv
+source;share/rovio_qos_relay/hook/ament_prefix_path.sh
+source;../../build/rovio_qos_relay/share/rovio_qos_relay/hook/pythonpath_develop.ps1
+source;../../build/rovio_qos_relay/share/rovio_qos_relay/hook/pythonpath_develop.dsv
+source;../../build/rovio_qos_relay/share/rovio_qos_relay/hook/pythonpath_develop.sh

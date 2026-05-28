@@ -1,0 +1,1 @@
+/home/hann/rovio_ws/build/rovio_interfaces/rosidl_generator_py/rovio_interfaces/srv/_srv_reset_to_pose_s.c

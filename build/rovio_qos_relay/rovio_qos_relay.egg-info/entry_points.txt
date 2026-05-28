@@ -1,0 +1,3 @@
+[console_scripts]
+d435i_to_rovio_relay = rovio_qos_relay.d435i_to_rovio_relay:main
+

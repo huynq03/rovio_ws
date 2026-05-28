@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "rovio_interfaces__py",
+		"source" : "/home/hann/rovio_ws/build/rovio_interfaces/rovio_interfaces__py"
+	}
+}

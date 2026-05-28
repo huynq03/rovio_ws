@@ -1,0 +1,1 @@
+/home/hann/rovio_ws/build/rovio/ament_cmake_core/rovioConfig-version.cmake

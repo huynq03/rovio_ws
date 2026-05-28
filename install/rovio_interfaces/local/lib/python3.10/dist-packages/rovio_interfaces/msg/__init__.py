@@ -1,0 +1,1 @@
+/home/hann/rovio_ws/build/rovio_interfaces/rosidl_generator_py/rovio_interfaces/msg/__init__.py
