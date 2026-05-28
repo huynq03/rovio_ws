@@ -105,6 +105,27 @@ class RovioOdomToFlu(Node):
         )
         self.q_axis_inv = q_conj(self.q_axis)
 
+        # Camera is mounted facing forward with the quad.
+        # D435i optical frame: X right, Y down, Z forward.
+        # Quad base_link FLU: X forward, Y left, Z up.
+        # R_world_base = R_world_camera * R_camera_base
+        self.q_cam_to_base = Quaternion(
+            x=0.5,
+            y=-0.5,
+            z=0.5,
+            w=0.5,
+        )
+
+        # Extra correction observed from PX4:
+        # vehicle_visual_odometry roll was about +90 deg while FC attitude roll was near 0.
+        # Apply -90 deg around body X.
+        self.q_body_roll_fix = Quaternion(
+            x=-0.70710678118,
+            y=0.0,
+            z=0.0,
+            w=0.70710678118,
+        )
+
         self.get_logger().info(
             'Publishing /rovio/odometry_flu with full axis conversion: '
             'X_new=Y_old, Y_new=-X_old, Z_new=Z_old, orientation converted too.'
@@ -123,8 +144,17 @@ class RovioOdomToFlu(Node):
         out.pose.pose.position.z = pz
 
         q_old = q_normalize(msg.pose.pose.orientation)
-        q_new = q_mul(q_mul(self.q_axis, q_old), self.q_axis_inv)
-        out.pose.pose.orientation = q_normalize(q_new)
+
+        # First convert ROVIO world axes to FLU world axes.
+        q_cam_in_flu_world = q_mul(q_mul(self.q_axis, q_old), self.q_axis_inv)
+
+        # Then convert child frame from camera optical to quad base_link FLU.
+        q_base_in_flu_world = q_mul(q_cam_in_flu_world, self.q_cam_to_base)
+
+        # Final measured mounting correction.
+        q_base_fixed_in_flu_world = q_mul(q_base_in_flu_world, self.q_body_roll_fix)
+
+        out.pose.pose.orientation = q_normalize(q_base_fixed_in_flu_world)
 
         vx, vy, vz = map_vec(msg.twist.twist.linear)
         out.twist.twist.linear.x = vx

@@ -2,6 +2,52 @@ import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
 
+import math
+from geometry_msgs.msg import Quaternion
+
+
+def q_normalize(q):
+    n = math.sqrt(q.x*q.x + q.y*q.y + q.z*q.z + q.w*q.w)
+    if n <= 1e-12:
+        return Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
+    return Quaternion(x=q.x/n, y=q.y/n, z=q.z/n, w=q.w/n)
+
+
+def q_mul(a, b):
+    return Quaternion(
+        x=a.w*b.x + a.x*b.w + a.y*b.z - a.z*b.y,
+        y=a.w*b.y - a.x*b.z + a.y*b.w + a.z*b.x,
+        z=a.w*b.z + a.x*b.y - a.y*b.x + a.z*b.w,
+        w=a.w*b.w - a.x*b.x - a.y*b.y - a.z*b.z,
+    )
+
+
+# Convert our ROVIO FLU world:
+#   X forward, Y left, Z up
+# to MAVROS expected ENU:
+#   X east/right, Y north/forward, Z up
+#
+# Mapping:
+#   X_enu = -Y_flu
+#   Y_enu =  X_flu
+#   Z_enu =  Z_flu
+#
+# This is +90 deg around Z.
+Q_FLU_WORLD_TO_ENU = Quaternion(
+    x=0.0,
+    y=0.0,
+    z=0.70710678118,
+    w=0.70710678118,
+)
+
+
+def flu_world_pos_to_enu(p):
+    return (-p.y, p.x, p.z)
+
+
+def flu_world_quat_to_enu(q):
+    return q_normalize(q_mul(Q_FLU_WORLD_TO_ENU, q_normalize(q)))
+
 try:
     from rovio_interfaces.msg import Health
     HAS_ROVIO_HEALTH = True
@@ -107,7 +153,16 @@ class RovioToMavrosOdometry(Node):
         out.header.frame_id = self.frame_id
         out.child_frame_id = self.child_frame_id
 
+        # Convert pose from our FLU-world convention into MAVROS ENU convention.
         out.pose = msg.pose
+        px, py, pz = flu_world_pos_to_enu(msg.pose.pose.position)
+        out.pose.pose.position.x = px
+        out.pose.pose.position.y = py
+        out.pose.pose.position.z = pz
+        out.pose.pose.orientation = flu_world_quat_to_enu(msg.pose.pose.orientation)
+
+        # Keep twist as-is for now. Twist is expressed in child_frame_id/base_link.
+        # MAVROS will handle body FLU -> FRD conversion.
         out.twist = msg.twist
 
         self.pub.publish(out)
