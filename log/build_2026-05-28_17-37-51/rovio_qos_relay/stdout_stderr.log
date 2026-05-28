@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing rovio_qos_relay.egg-info/PKG-INFO
+writing dependency_links to rovio_qos_relay.egg-info/dependency_links.txt
+writing entry points to rovio_qos_relay.egg-info/entry_points.txt
+writing requirements to rovio_qos_relay.egg-info/requires.txt
+writing top-level names to rovio_qos_relay.egg-info/top_level.txt
+reading manifest file 'rovio_qos_relay.egg-info/SOURCES.txt'
+writing manifest file 'rovio_qos_relay.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hann/rovio_ws/install/rovio_qos_relay/lib/python3.10/site-packages/rovio-qos-relay.egg-link (link to .)
+Installing d435i_to_rovio_relay script to /home/hann/rovio_ws/install/rovio_qos_relay/lib/rovio_qos_relay
+Installing rovio_odom_to_flu script to /home/hann/rovio_ws/install/rovio_qos_relay/lib/rovio_qos_relay
+
+Installed /home/hann/rovio_ws/build/rovio_qos_relay
+running symlink_data

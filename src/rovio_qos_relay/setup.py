@@ -19,6 +19,7 @@ setup(
     entry_points={
         'console_scripts': [
             'd435i_to_rovio_relay = rovio_qos_relay.d435i_to_rovio_relay:main',
+            'rovio_odom_to_flu = rovio_qos_relay.rovio_odom_to_flu:main',
         ],
     },
 )
