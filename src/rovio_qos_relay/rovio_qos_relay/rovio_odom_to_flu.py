@@ -5,6 +5,35 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Quaternion
 
 
+# Mapping:
+#   X_new =  Y_old
+#   Y_new = -X_old
+#   Z_new =  Z_old
+#
+# Matrix A:
+#   [ 0  1  0 ]
+#   [-1  0  0 ]
+#   [ 0  0  1 ]
+#
+# This is a -90 deg rotation around Z.
+A = [
+    [0.0, 1.0, 0.0],
+    [-1.0, 0.0, 0.0],
+    [0.0, 0.0, 1.0],
+]
+
+
+def q_normalize(q):
+    n = math.sqrt(q.x*q.x + q.y*q.y + q.z*q.z + q.w*q.w)
+    if n <= 1e-12:
+        return Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
+    return Quaternion(x=q.x/n, y=q.y/n, z=q.z/n, w=q.w/n)
+
+
+def q_conj(q):
+    return Quaternion(x=-q.x, y=-q.y, z=-q.z, w=q.w)
+
+
 def q_mul(a, b):
     return Quaternion(
         x=a.w*b.x + a.x*b.w + a.y*b.z - a.z*b.y,
@@ -12,6 +41,41 @@ def q_mul(a, b):
         z=a.w*b.z + a.x*b.y - a.y*b.x + a.z*b.w,
         w=a.w*b.w - a.x*b.x - a.y*b.y - a.z*b.z,
     )
+
+
+def map_vec(v):
+    # new = A * old
+    return (
+        v.y,
+        -v.x,
+        v.z,
+    )
+
+
+def rotate_cov_6x6(cov):
+    # cov_new = T * cov_old * T^T
+    # T = diag(A, A), for [x,y,z,roll,pitch,yaw]
+    T = [[0.0 for _ in range(6)] for _ in range(6)]
+
+    for r in range(3):
+        for c in range(3):
+            T[r][c] = A[r][c]
+            T[r+3][c+3] = A[r][c]
+
+    old = [[cov[r*6 + c] for c in range(6)] for r in range(6)]
+
+    tmp = [[0.0 for _ in range(6)] for _ in range(6)]
+    out = [[0.0 for _ in range(6)] for _ in range(6)]
+
+    for r in range(6):
+        for c in range(6):
+            tmp[r][c] = sum(T[r][k] * old[k][c] for k in range(6))
+
+    for r in range(6):
+        for c in range(6):
+            out[r][c] = sum(tmp[r][k] * T[c][k] for k in range(6))
+
+    return [out[r][c] for r in range(6) for c in range(6)]
 
 
 class RovioOdomToFlu(Node):
@@ -31,36 +95,49 @@ class RovioOdomToFlu(Node):
             50,
         )
 
+        # q_axis = rotation around Z by -90 deg.
+        half = -math.pi / 4.0
+        self.q_axis = Quaternion(
+            x=0.0,
+            y=0.0,
+            z=math.sin(half),
+            w=math.cos(half),
+        )
+        self.q_axis_inv = q_conj(self.q_axis)
+
         self.get_logger().info(
-            'Publishing /rovio/odometry_flu with mapping: '
-            'X_new=Y_old, Y_new=-X_old, Z_new=Z_old'
+            'Publishing /rovio/odometry_flu with full axis conversion: '
+            'X_new=Y_old, Y_new=-X_old, Z_new=Z_old, orientation converted too.'
         )
 
     def cb(self, msg):
         out = Odometry()
+
         out.header = msg.header
+        out.header.frame_id = 'world_flu'
         out.child_frame_id = 'base_link_flu'
 
-        # New frame: X forward, Y left, Z up
-        # Assumption: ROVIO old Y = forward, old X = right, old Z = up.
-        out.pose.pose.position.x = msg.pose.pose.position.y
-        out.pose.pose.position.y = -msg.pose.pose.position.x
-        out.pose.pose.position.z = msg.pose.pose.position.z
+        px, py, pz = map_vec(msg.pose.pose.position)
+        out.pose.pose.position.x = px
+        out.pose.pose.position.y = py
+        out.pose.pose.position.z = pz
 
-        # For first test, keep orientation unchanged.
-        # Position-axis correctness is tested first.
-        out.pose.pose.orientation = msg.pose.pose.orientation
+        q_old = q_normalize(msg.pose.pose.orientation)
+        q_new = q_mul(q_mul(self.q_axis, q_old), self.q_axis_inv)
+        out.pose.pose.orientation = q_normalize(q_new)
 
-        out.twist.twist.linear.x = msg.twist.twist.linear.y
-        out.twist.twist.linear.y = -msg.twist.twist.linear.x
-        out.twist.twist.linear.z = msg.twist.twist.linear.z
+        vx, vy, vz = map_vec(msg.twist.twist.linear)
+        out.twist.twist.linear.x = vx
+        out.twist.twist.linear.y = vy
+        out.twist.twist.linear.z = vz
 
-        out.twist.twist.angular.x = msg.twist.twist.angular.y
-        out.twist.twist.angular.y = -msg.twist.twist.angular.x
-        out.twist.twist.angular.z = msg.twist.twist.angular.z
+        wx, wy, wz = map_vec(msg.twist.twist.angular)
+        out.twist.twist.angular.x = wx
+        out.twist.twist.angular.y = wy
+        out.twist.twist.angular.z = wz
 
-        out.pose.covariance = msg.pose.covariance
-        out.twist.covariance = msg.twist.covariance
+        out.pose.covariance = rotate_cov_6x6(msg.pose.covariance)
+        out.twist.covariance = rotate_cov_6x6(msg.twist.covariance)
 
         self.pub.publish(out)
 
